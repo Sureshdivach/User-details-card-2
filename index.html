@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="main_container">
+
+    </div>
+</body>
+<script>
+    let data =[
+        {"image":"https://media.istockphoto.com/id/1889565378/photo/oriental-white-eye-bird-taking-bath.jpg?s=612x612&w=0&k=20&c=zwFVAwUfJj_LiuCUNwRxWZja0IRlZh2L1HtlrDJSdqQ=",
+          "title":"Nature Image 1"  
+        },
+        {"image":"https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=600",
+          "title":"Nature Image 2"  
+        },
+        {"image":"https://images.pexels.com/photos/462162/pexels-photo-462162.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "title":"Nature Image 3"  
+        },
+        {"image":"https://images.pexels.com/photos/709552/pexels-photo-709552.jpeg?auto=compress&cs=tinysrgb&w=600",
+          "title":"Nature Image 4"  
+        },
+        {"image":"https://images.pexels.com/photos/1766838/pexels-photo-1766838.jpeg?auto=compress&cs=tinysrgb&w=600",
+          "title":"Nature Image 5"  
+        },
+        {"image":"https://images.pexels.com/photos/460775/pexels-photo-460775.jpeg?auto=compress&cs=tinysrgb&w=600",
+          "title":"Nature Image 6"  
+        },
+        {"image":"https://media.istockphoto.com/id/668799610/photo/tropical-sea.jpg?s=612x612&w=0&k=20&c=CRw8bjmvP7c0UuZFnt5I7cKRlVqbuRfmgkAh_SEOKTY=",
+          "title":"Nature Image 7"  
+        },
+        {"image":"https://media.istockphoto.com/id/180549773/photo/elephants-in-the-beautiful-landscape.jpg?s=612x612&w=0&k=20&c=-WRB6F0VZzLVvGH5mvdbDFfqMu2O3Vmk0dnS_Y3h77U=",
+          "title":"Nature Image 8"  
+        },
+    ]
+     let main_container = document.getElementById("main_container")
+
+   function getData(){
+        data.map((user)=>{
+    let card = document.createElement("card_div")
+    card.classList.add("card")
+    let image = document.createElement("img")
+    image.src = user.image
+    let title = document.createElement("h1")
+    title.innerText = user.title
+    let details=document.createElement("p")
+    details.innerText="Nature is indeed God's precious gift to Earth. It is the primary source of all the necessities for the nourishment of all living beings on Earth"
+    let btn = document.createElement("btn")
+    btn.innerText = "Know More"
+    card.append(image,title,details,btn);
+    main_container.append(card)
+    // console.log(user)
+});
+
+}
+getData()
+</script>
+
+
+
+</html>
